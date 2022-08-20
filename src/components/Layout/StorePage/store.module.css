@@ -1,0 +1,21 @@
+.left{
+    margin-left: 3%;
+    width:47%;
+    /* border: 1px black solid; */
+    /* height: 70vh; */
+    /* display: inline-block; */
+}
+
+.right{
+    width:47%;
+    /* border: 1px blue solid; */
+    /* height: 70vh; */
+    /* display: inline; */
+}
+
+.table{
+    width: 94%;
+    /* height: 90%; */
+    padding: 0;
+    margin-left: 3%;
+}
