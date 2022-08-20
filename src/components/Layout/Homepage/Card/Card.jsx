@@ -40,10 +40,15 @@ const Card = (props) => {
     const checkQueue=()=>{
       let user = localStorage.getItem("userid")
       console.log(user, user.toString());
+      setInQueue(false)
+
       for(let i=0;i<props.n.queue.length;i++){
           if(props.n.queue[i]._id===user.toString()){
               setInQueue(true)
               break
+          }
+          else{
+            setInQueue(false)
           }
       }
   }
