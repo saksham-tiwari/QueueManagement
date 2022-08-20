@@ -1,0 +1,51 @@
+.viewFlex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.viewFlex>div{
+    width: 30%;
+}
+
+.removeBtn{
+    display: block;
+    background: #FF8898;
+    box-shadow: 0px 4px 15px #FF8898;
+    border-radius: 15px;
+    border: none;
+    padding: 4px 12px;
+    width: 50%;
+    text-align: center;
+    margin-top: 4px;
+    font-size: 20px;
+    /* font-weight: 600; */
+    cursor: pointer;
+    margin-left: 25%;
+}
+
+.counters{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.imgCounter{
+    width:10%;
+    marginLeft:25%;
+    display: inline;
+}
+
+.flexCounter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.flexCounters{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
