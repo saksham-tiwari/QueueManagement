@@ -47,7 +47,7 @@ export const getSingle = (id)=>(dispatch)=>{
             type:"Set_Single",
             payload:res.data
         })
-        return Promise.resolve();
+        return Promise.resolve(res);
     })
     .catch((err)=>{
         console.log(err);
@@ -69,12 +69,12 @@ export const joinQueue = (shopid)=>(dispatch)=>{
 export const allQueues = ()=>(dispatch)=>{
     return LayoutService.allQueues()
     .then((res)=>{
-        console.log(res)
+        console.log(res);
         dispatch({
             type:"GetAllQueues",
             payload:res.data
         })
-        return Promise.resolve();
+        return Promise.resolve(res.data);
     })
     .catch((err)=>{
         console.log(err);
