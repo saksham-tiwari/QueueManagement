@@ -1,0 +1,64 @@
+.otp-heading > p{
+    font-family: 'Source Sans Pro';
+    color: #192839;
+    font-size: 5em;
+    font-weight: 900;
+    position: relative;
+    left: -12%;
+}
+.otp-heading{
+    height: 47vh;
+    width: 32vw;
+}
+.otp-heading > p > span{
+    color: #41D3BD;
+}
+.otp-input{
+    position: absolute;
+    top: 45%;
+    left: 27.5%;
+    width: 27vw;
+}
+.otp-verify{
+    position: absolute;
+    width: 22vw;
+    height: 7vh;
+    left: 27.5%;
+    top: 78%;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    background-color: #41D3BD;
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
+    font-size: 1.6em;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgb(108 187 134 / 49%);
+}
+.otp-head {
+    position: absolute;
+    top: 100%;
+    left: 32.5%;
+    font-family: 'Source Sans Pro';
+    font-size: 1.3em;
+    display: inline-block;
+    width: 21vw;
+}
+.otp-head > u{
+    cursor: pointer;
+    color: #41D3BD;
+    margin-left: 3%;
+}
+.Enter-otp{
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
+    font-size: 2.5em;
+    position: absolute;
+    top: 21%;
+    left: 24.5%;
+}
+.timer{
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
+    display: inline-block;
+    margin-left: 3%;
+}
