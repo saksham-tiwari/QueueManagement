@@ -13,6 +13,7 @@ import TimerIcon from '@mui/icons-material/Timer';
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux/es/exports';
 import { addStoreDetails, checkStore } from '../../../redux/actions/LayoutAction';
+import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions';
 
 const CreateStore = () => {
     let navigate = useNavigate()
@@ -58,8 +59,10 @@ const CreateStore = () => {
     }
 
     useEffect(()=>{
+        dispatch(setLoader())
         dispatch(checkStore())
         .then((res)=>{
+            dispatch(UnsetLoader())
             console.log(storeDetails.name)
             console.log(res.data);
             setStoreDetails(res.data)
