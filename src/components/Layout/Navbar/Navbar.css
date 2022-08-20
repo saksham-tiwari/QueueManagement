@@ -1,0 +1,33 @@
+.Navbar{
+    background: #192839;
+    width: 100vw;
+    height: 56px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    position: absolute;
+    left: 45px;
+    display: flex;
+    align-items: center;
+    width: 10vw;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.logo-head > p{
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
+}
+.Nav-menu{
+    position: absolute;
+    right: 36px;
+    display: flex;
+    width: 8%;
+    justify-content: space-around;
+}
+.logo-image > .image{
+    width: 79%;
+    height: 100%;
+}
