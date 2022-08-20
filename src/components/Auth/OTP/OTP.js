@@ -6,6 +6,8 @@ import OtpInput from 'react-otp-input';
 import AuthService from '../../../services/API'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
+import Toaster from '../../Layout/Alerts/Alert'
+import { toast } from 'react-toastify'
 const Otp = () => {
     const [state, setState] = useState('');
     const [flag, setFlag] = useState(false);
@@ -13,7 +15,7 @@ const Otp = () => {
     const [seconds, setSeconds] = useState(0);
     const handleChange = (otp) => setState(otp);
     const x = localStorage.getItem("forgot");
-    const {email,pass} = useSelector((state)=>state.AuthReducer);
+    const { email, pass } = useSelector((state) => state.AuthReducer);
     const style = {
         width: "28vw",
         height: "12vh",
@@ -33,7 +35,7 @@ const Otp = () => {
             }
             if (seconds === 0) {
                 if (minutes === 0) {
-                    clearInterval(myInterval)  
+                    clearInterval(myInterval)
                 } else {
                     setMinutes(minutes - 1);
                     setSeconds(59);
@@ -45,50 +47,52 @@ const Otp = () => {
         };
     });
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e) => {
         e.preventDefault();
-        if(localStorage.getItem("forgot")==='1'){
+        if (localStorage.getItem("forgot") === '1') {
             localStorage.removeItem("forgot");
-            let obj={
-                "email":localStorage.getItem("emailj"),
-                "userOtp":state
+            let obj = {
+                "email": localStorage.getItem("emailj"),
+                "userOtp": state
             }
             AuthService.otp(obj)
-            .then((res)=>{
-            console.log(res);
-            navigate("/reset");
-            }).catch((e)=>{
-            console.log(e);
-            })
-        }else{
-            let obj={
-                "email":email,
-                "otp":state,
-                "password":pass,
+                .then((res) => {
+                    console.log(res);
+                    navigate("/reset");
+                }).catch((e) => {
+                    console.log(e);
+                    toast.error("Wrong OTP");
+                })
+        } else {
+            let obj = {
+                "email": email,
+                "otp": state,
+                "password": pass,
             }
             AuthService.otp(obj)
-            .then((res)=>{
-            console.log(res);
-            navigate("/detail");
-            }).catch((e)=>{
-            console.log(e);
-            })
+                .then((res) => {
+                    console.log(res);
+                    navigate("/detail");
+                }).catch((e) => {
+                    console.log(e);
+                    toast.error("Something is Wrong")
+                })
         }
-}
-  return (<>
+    }
+    return (<>
         <div className='Signup-Page'>
             <div className='Navbar-Signup'>
                 <Navbar />
             </div>
             <div className='middle-portion'>
-            {
-                        x==='1' ? <div className='login-heading'>
+                {
+                    x === '1' ? <div className='login-heading'>
                         <p>Check your email <span className='ques'>.</span></p>
-                    </div> :<div className='otp-heading'>
-                    <p>Let us verify your email <span className='ques'>.</span></p>
-                        </div> 
-                    }
-                
+                    </div> : <div className='otp-heading'>
+                        <p>Let us verify your email <span className='ques'>.</span></p>
+                    </div>
+                }
+
                 <form className='input-login' onSubmit={(e) => handleSubmit(e)}>
                     <p className='Enter-otp'>Enter OTP</p>
                     <div className='otp-input'>
@@ -103,21 +107,22 @@ const Otp = () => {
                         />
                     </div>
                     <button className='otp-verify' type='submit'>Verify</button>
-                    <p className='otp-head'>Didn't receive   
+                    <p className='otp-head'>Didn't receive
                         {
-                         minutes === 0 && seconds === 0
-                        ? <u onClick={handleClick}>Resend OTP</u>
-                       : <p className='timer'> {minutes}:{seconds < 10 ?  `0${seconds}` : seconds}</p>  
+                            minutes === 0 && seconds === 0
+                                ? <u onClick={handleClick}>Resend OTP</u>
+                                : <p className='timer'> {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</p>
                         }
-                        </p>
+                    </p>
                 </form>
             </div>
             <div className='queue-img'>
                 <img className="pic" src={image} alt="logo" />
             </div>
+            <Toaster />
         </div>
-  </>
-  )
+    </>
+    )
 }
 
 export default Otp

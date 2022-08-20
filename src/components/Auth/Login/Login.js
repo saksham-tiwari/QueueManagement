@@ -5,6 +5,8 @@ import image from '../../Assets/pic.svg'
 import {useNavigate} from 'react-router-dom'
 import './Login.css'
 import AuthService from '../../../services/API'
+import Toaster from '../../Layout/Alerts/Alert'
+import { toast } from 'react-toastify'
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         mode: "onTouched"
@@ -27,6 +29,7 @@ const Login = () => {
             }
         }).catch((e)=>{
             console.log(e);
+            toast.error("Something is Wrong")
         })
     }
     const handleClick = () =>{
@@ -98,6 +101,7 @@ const Login = () => {
             <div className='queue-img'>
                 <img className="pic" src={image} alt="logo" />
             </div>
+            <Toaster />
         </div>
     )
 }

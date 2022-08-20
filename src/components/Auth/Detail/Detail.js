@@ -9,6 +9,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import * as actionCreators from '../../../redux/actions/AuthAction'
 import { useNavigate } from 'react-router-dom'
 import AuthService from '../../../services/API'
+import Toaster from '../../Layout/Alerts/Alert'
+import { toast } from 'react-toastify'
 const Details = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         mode: "onTouched"
@@ -17,14 +19,14 @@ const Details = () => {
     const navigate = useNavigate();
     const { pass } = useSelector((state) => state.AuthReducer);
     const [role, setRole] = useState(null);
-    const [flag,setFlag] = useState(true)
-    useEffect(()=>{
-        if(role === "customer"){
+    const [flag, setFlag] = useState(true)
+    useEffect(() => {
+        if (role === "customer") {
             setFlag(false);
-        }else{
+        } else {
             setFlag(true);
         }
-    },[role])
+    }, [role])
     const onSubmit = (data, e) => {
         e.preventDefault();
         dispatch(actionCreators.userName(data.fullname));
@@ -51,6 +53,7 @@ const Details = () => {
             AuthService.Details(obj)
                 .then((res) => {
                     console.log(res);
+                    toast.success("Details saved sucessfully")
                     localStorage.setItem("userid", res.data._id);
                     if (localStorage.getItem("Type") === "store") {
                         navigate("/create-store");
@@ -59,6 +62,7 @@ const Details = () => {
                     }
                 }).catch((e) => {
                     console.log(e);
+                    toast.error("Something is Wrong")
                 })
         } else {
             alert("Choose Your Role");
@@ -213,6 +217,7 @@ const Details = () => {
                     <button className='submit-btn' type='submit'>Submit</button>
                 </form>
             </div>
+            <Toaster />
         </div >
     )
 }
