@@ -1,0 +1,179 @@
+.detail-heading {
+    height: 31vh;
+    width: 49vw;
+}
+.heading1{
+    font-family: 'Source Sans Pro';
+    color: #192839;
+    font-size: 5em;
+    font-weight: 900; 
+}
+.heading1 > span{
+    color: #41D3BD;
+}
+.heading2{
+    font-family: 'Source Sans Pro';
+    color: #192839;
+    font-size: 2em;
+    font-weight: 900; 
+}
+.photo1,.photo2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.images-role {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+    position: relative;
+}
+.photo1-role,.photo2-role{
+    width: 10vw;
+    height: 5vh;
+    background: #41D3BD;
+    box-shadow: 0px 2.73786px 15px #C4C4C4;
+    border-radius: 68.4466px;
+    font-family: 'Source Sans Pro';
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.photo2-role {
+    background: #304D6D;
+    position: absolute;
+    top: 87%;
+}
+.photo2-role:hover{
+    background: #4a81b8;
+}
+.photo1-role:hover{
+    background: #05a089;
+}
+.photo2-img{
+    position: absolute;
+    top: 7%;
+}
+.first-portion, .second-portion {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 3%;
+}
+.role{
+    margin-top: 3%;
+}
+.user-img{
+    width: 144px;
+    height: 144px;
+    border: 2px solid #192839;
+    border-radius: 15px;
+    position: absolute;
+    top: 3%;
+    left: 11%;
+}
+.pic2{
+    width: 140px;
+    height: 140px;
+    margin-top: 0%;
+    border-radius: 12px;
+}
+.upload-img-btn{
+    position: absolute;
+    top: 11%;
+    left: 40%;
+    width: 17vw;
+    height: 6vh;
+    cursor: pointer;
+    background: #304D6D;
+    border-radius: 68.4466px;
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+    place-items: center;
+    display: grid;
+
+}
+#plus{
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    font-size: 22px;
+}
+.upload-img-btn > span{
+    width: fit-content;
+    position: absolute;
+    left: 21%;
+}
+.input-login-field{
+    position: absolute;
+    top: 31%;
+    height: 50vh;
+    left: 11%;
+}
+.input-field2{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    color: #2b4057f3;
+    font-size: 1.2em;
+    padding: 3%;
+    padding-left: 3%;
+    width: 32vw;
+    border: 3px solid black;
+    border-radius: 10px;
+    position: relative;
+    padding-right: 4%;
+}
+.mobile{
+    position: relative;
+    top: 10%;
+}
+.fullname{
+    position: relative;
+}
+.radio-btns{
+    display: flex;
+    justify-content: space-between;
+    width: 29vw;
+    position: absolute;
+    top: 57%;
+    left: 12%;
+}
+#field-male,#field-female,#field-other{
+    position: relative;
+    left: -5%;
+    cursor: pointer;
+}
+.label-data{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    color: #2b4057f3;
+    font-size: 1.4em;
+}
+.submit-btn {
+    position: absolute;
+    width: 22vw;
+    height: 7vh;
+    left: 20.5%;
+    top: 68%;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    background-color: #41D3BD;
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
+    font-size: 1.6em;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgb(108 187 134 / 49%);
+}
