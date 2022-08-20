@@ -13,6 +13,7 @@ import CreateStore from './components/Layout/CreateStore/CreateStore';
 import ViewQueue from './components/Layout/ViewQueue/ViewQueue';
 import Loader from './components/Layout/Loaders/GifLoader';
 import { useSelector } from 'react-redux';
+import Error404 from './components/Layout/Error404/Error404';
 function App() {
   let loader = useSelector(state=>state.LoaderReducer)
   useEffect(()=>{
@@ -39,7 +40,8 @@ function App() {
         <Route exact path="/view-queue/id" element={<ViewQueue/>}/>
         <Route exact path="/qrcode" element={<QrScanner />} />
 
-        
+        <Route path="/404" element={<Error404/>} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </>
   );

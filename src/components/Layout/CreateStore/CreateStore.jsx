@@ -67,6 +67,10 @@ const CreateStore = () => {
     }
 
     useEffect(()=>{
+        let user = localStorage.getItem("userid")
+        if(user===null){
+            navigate("/")
+        }
         dispatch(setLoader())
         dispatch(checkStore())
         .then((res)=>{
