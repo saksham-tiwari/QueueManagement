@@ -1,0 +1,53 @@
+.box{
+    width: 45%;
+    padding-left: 10%;
+}
+
+.box input,textarea{
+    width: 80%;
+    padding: 4px 8px;
+    margin: 5px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #192839;
+}
+.coord{
+    border: 2px #192839 solid;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 200ms ease-in;
+}
+.coord:hover{
+    background-color: #192839;
+    color: white;
+}
+.mobile{
+    height: 530px;
+    width: 80%;
+    border: 4px black solid;
+    border-radius: 20px;
+}
+
+.left{
+    margin-left: 3%;
+    width:47%;
+    /* border: 1px black solid; */
+    /* height: 70vh; */
+    /* display: inline-block; */
+}
+
+.right{
+    width:47%;
+    /* border: 1px blue solid; */
+    /* height: 70vh; */
+    /* display: inline; */
+}
+
+.table{
+    width: 94%;
+    /* height: 90%; */
+    padding: 0;
+    margin-left: 3%;
+}
