@@ -8,6 +8,14 @@ import { useNavigate } from 'react-router-dom';
 
 const Card = (props) => {
     let navigate = useNavigate();
+    useEffect(()=>{
+      let user = localStorage.getItem("userid")
+      console.log(user);
+      if(user===null){
+        console.log("here");
+        navigate("/login")
+      }
+    },[])
     // console.log(props)
     // let arr=[0];
     let [arr, setArr] = useState([0])
@@ -39,11 +47,10 @@ const Card = (props) => {
     }
     const checkQueue=()=>{
       let user = localStorage.getItem("userid")
-      console.log(user, user.toString());
       setInQueue(false)
 
       for(let i=0;i<props.n.queue.length;i++){
-          if(props.n.queue[i]._id===user.toString()){
+          if(user!==null&&props.n.queue[i]._id===user.toString()){
               setInQueue(true)
               break
           }

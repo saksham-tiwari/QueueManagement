@@ -9,12 +9,24 @@ import { allQueues, getNearby, getSingle } from '../../../redux/actions/LayoutAc
 import { useSelector } from 'react-redux/es/exports';
 import Loader from '../Loaders/GifLoader';
 import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
   const [loc,setLoc]= useState({
     lat: 0,
     long: 0
  });
+
+ const navigate = useNavigate
+
+useEffect(()=>{
+  let user = localStorage.getItem("userid")
+  console.log(user);
+  if(user===null){
+    console.log("here");
+    // navigate("/login")
+  }
+},[])
 
 const [state,setState] = useState([])
 function getLocation() {

@@ -12,7 +12,17 @@
     border-radius: 10px;
     border: 2px solid #192839;
 }
-
+.coord{
+    border: 2px #192839 solid;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 200ms ease-in;
+}
+.coord:hover{
+    background-color: #192839;
+    color: white;
+}
 .mobile{
     height: 530px;
     width: 80%;

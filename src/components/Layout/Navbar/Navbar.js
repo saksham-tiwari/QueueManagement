@@ -13,7 +13,7 @@ const qrScan = () => {
     navigate("/qrcode");
 }
 const logoClick = () =>{
-    navigate("/login");
+    navigate("/");
 }
     return (
         <div className='Navbar'>

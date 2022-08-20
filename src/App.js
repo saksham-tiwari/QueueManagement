@@ -22,11 +22,10 @@ function App() {
         {loader[0]?<Loader/>:<></>}
 
        <Routes>
+       
          {/* Auth Routes */}
+
         <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/store/:id" element={<StorePage/>}/>
-        <Route exact path="/create-store" element={<CreateStore/>}/>
-        <Route exact path="/view-queue/id" element={<ViewQueue/>}/>
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/otp" element={<Otp />} />
@@ -35,7 +34,12 @@ function App() {
         <Route exact path="/detail" element={<Details />} />
 
         {/* Layout Routes */}
+          <Route exact path="/store/:id" element={<StorePage/>}/>
+        <Route exact path="/create-store" element={<CreateStore/>}/>
+        <Route exact path="/view-queue/id" element={<ViewQueue/>}/>
         <Route exact path="/qrcode" element={<QrScanner />} />
+
+        
       </Routes>
     </>
   );

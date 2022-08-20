@@ -15,6 +15,7 @@ import { useDispatch } from 'react-redux/es/exports';
 import { addStoreDetails, checkStore } from '../../../redux/actions/LayoutAction';
 import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions';
 
+
 const CreateStore = () => {
     let navigate = useNavigate()
     const [strName,setStrName] = useState("");
@@ -54,8 +55,15 @@ const CreateStore = () => {
 
         console.log(a);
         console.log(strName,parseInt(billTime),parseInt(from),parseInt(to),parseInt(ctr),loc.lat.toString(),loc.long.toString(),about);
-        
+        dispatch(setLoader())
         dispatch(addStoreDetails(strName,parseInt(ctr),about,a,a,a,parseFloat(loc.lat),parseFloat(loc.long)))
+        .then(()=>{
+            dispatch(UnsetLoader())
+        })
+        .catch(()=>{
+            dispatch(UnsetLoader())
+
+        })
     }
 
     useEffect(()=>{
@@ -77,6 +85,7 @@ const CreateStore = () => {
         })
         .catch((err)=>{
             console.log(err.status)
+            dispatch(UnsetLoader())
             setStoreDetails([])
         })
     },[])
@@ -90,9 +99,14 @@ const CreateStore = () => {
                 <br/>
                 <StoreMallDirectoryIcon style={{position:"relative", top:"10px"}} fontSize="large"/><input placeholder="Store Name" value={strName} onChange={(e)=>{setStrName(e.target.value)}}></input>
                 <br/>
+                <select class="form-select" aria-label="Default select example" style={{width:"80%",marginLeft:"8%",borderColor:"#192839",borderWidth:"2px",padding:"6px 10px",borderRadius:"10px",fontSize:"16px"}}>
+                    <option selected>Store type</option>
+                    <option value="1">General store</option>
+                </select>
+                <br/>
                 <img src={img1} alt="counters" style={{width:"7%", position:"relative", top:"10px"}}></img><input placeholder="Number of counters" value={ctr} onChange={(e)=>{setCtr(e.target.value)}}></input>
                 <br/>
-                <LocationOnIcon style={{position:"relative", top:"10px"}} fontSize="large"/><button onClick={getLocation}>Get coordinates</button>
+                <LocationOnIcon style={{position:"relative", top:"10px"}} fontSize="large"/><button className={styles.coord} onClick={getLocation}>Get coordinates</button>
                 <p>{loc.lat},{loc.long}</p>
                 <br/>
                 <img src={img2} alt="counters" style={{width:"7%", position:"relative", top:"10px"}}></img><input placeholder="Billing Time" value={billTime} onChange={(e)=>{setBillTime(e.target.value)}}></input>
