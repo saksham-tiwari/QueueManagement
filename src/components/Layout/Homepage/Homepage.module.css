@@ -1,0 +1,160 @@
+.topSearch{
+    display: flex;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 10px;
+}
+.mainHead{
+    margin-left: 2.5%;
+    font-size: 44px;
+}
+.one{
+    flex: 2;
+}
+.two,.three{
+    flex: 1;
+    /* font-size: 18px;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    padding-left: 50px;
+    border: none;
+    background: rgba(48, 77, 109, 0.1); */
+}
+.topSearch input{
+    width: 95%;
+    font-size: 18px;
+    margin-right: 10px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 20px;
+    padding-left: 35px;
+    border: none;
+    background: rgba(48, 77, 109, 0.1);
+    
+}
+::placeholder{
+    color: #192839;
+}
+
+.iconInput{
+    background: #d9dfe4;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    font-size: 50px;
+    top: -30px;
+    color: #192839;
+}
+.iconInput svg{
+    display: block;
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+.card{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 220px;
+    height: 220px;
+    /* padding: 8px; */
+    color: #192839;
+    margin: 16px 16px;
+}
+.head{
+    font-size: 28px;
+    text-align: center;
+}
+.icons{
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+}
+.roundNo{
+    margin-left: 5px;
+    font-size: 12px;
+    display: inline-block;
+    background-color: #F9DB6D;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    top: -10px;
+}
+.yellowCapsule{
+    background: #F9DB6D;
+    border-radius: 22px;
+    width: 75%;
+    text-align: center;
+    margin-left: 12.5%;
+    margin-top: 2px;
+}
+.yellowCapsule2{
+    background: #F9DB6D;
+    border-radius: 22px;
+    width: 30%;
+    margin-top: 2px;
+    font-size: 16px;
+    padding: 4px 12px;
+}
+.enterButton{
+    background: #41D3BD;
+    box-shadow: 0px 4px 15px #41D3BD;
+    border-radius: 15px;
+    border: none;
+    padding: 4px 12px;
+    width: 100%;
+    text-align: center;
+    margin-top: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.leaveButton{
+    background: #FF8898;
+    box-shadow: 0px 4px 15px #FF8898;
+    border-radius: 15px;
+    border: none;
+    padding: 4px 12px;
+    width: 100%;
+    text-align: center;
+    margin-top: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.listElement{
+    width: 95%;
+    margin-left: 2.5%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    font-size: 24px;
+    padding: 4px 12px;
+    padding-right: 0;
+    margin-bottom: 20px;
+}
+.leaveBtn{
+    float:right; 
+    padding:4px 12px;
+    font-size:24px; 
+    position:relative;
+    top:-3.5px; 
+    background: #FF8898;
+    box-shadow: 0px 4px 15px #FF8898;
+    border-radius: 15px;
+    border-color: #FF8898;
+    border-style: solid;
+    cursor: pointer;
+}
