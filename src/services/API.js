@@ -1,6 +1,6 @@
 import axios from 'axios';
 import url from './BaseUrl';
-import 'antd/dist/antd.css';
+// import 'antd/dist/antd.css';
 // Auth Service
 class AuthServices {
 
