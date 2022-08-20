@@ -5,8 +5,6 @@ import image from '../../Assets/pic.svg'
 import {useNavigate} from 'react-router-dom'
 import './Login.css'
 import AuthService from '../../../services/API'
-import Toaster from '../../Layout/Alerts/Alert'
-import { toast } from 'react-toastify'
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         mode: "onTouched"
@@ -14,7 +12,6 @@ const Login = () => {
     const navigate = useNavigate();
     const onSubmit = (data, e) => {
         e.preventDefault();
-        localStorage.setItem("Type",data.aopt);
         let obj = {
             "email":data.email,
             "password":data.password,
@@ -24,12 +21,15 @@ const Login = () => {
         .then((res)=>{
             console.log(res);
             if(res){
+                localStorage.setItem("access",res.data.access_token);
+                localStorage.setItem("access",res.data.refresh_token);
                 localStorage.setItem("userid",res.data._id);
-                navigate("/");
+                // navigate("/");
+                // console.log(obj);
+                !obj.isStore?navigate("/create-store"):navigate("/")
             }
         }).catch((e)=>{
             console.log(e);
-            toast.error("Something is Wrong")
         })
     }
     const handleClick = () =>{
@@ -101,7 +101,6 @@ const Login = () => {
             <div className='queue-img'>
                 <img className="pic" src={image} alt="logo" />
             </div>
-            <Toaster />
         </div>
     )
 }

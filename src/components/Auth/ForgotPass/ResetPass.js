@@ -5,8 +5,6 @@ import image from '../../Assets/pic.svg'
 import './ForgotPass.css'
 import AuthService from '../../../services/API'
 import { useSelector } from 'react-redux'
-import Toaster from '../../Layout/Alerts/Alert'
-import { toast } from 'react-toastify'
 const ResetPass = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         mode: "onTouched"
@@ -25,10 +23,8 @@ const ResetPass = () => {
         AuthService.resetpass(obj)
             .then((res) => {
                 console.log(res);
-                toast.success("New password is set")
             }).catch((e) => {
                 console.log(e);
-                toast.error("Something is Wrong")
             })
     }
     const [toggle, setToggle] = useState(false);
@@ -65,7 +61,6 @@ const ResetPass = () => {
             <div className='queue-img'>
                 <img className="pic" src={image} alt="logo" />
             </div>
-            <Toaster />
         </div>
     )
 }

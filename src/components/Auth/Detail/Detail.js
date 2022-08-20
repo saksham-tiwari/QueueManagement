@@ -5,66 +5,50 @@ import { useForm } from 'react-hook-form'
 import photo1 from '../../Assets/customer.svg'
 import photo2 from '../../Assets/store.svg'
 import photo3 from '../../Assets/user.svg'
-import { useSelector, useDispatch } from 'react-redux'
+import {useSelector,useDispatch} from 'react-redux'
 import * as actionCreators from '../../../redux/actions/AuthAction'
 import { useNavigate } from 'react-router-dom'
 import AuthService from '../../../services/API'
-import Toaster from '../../Layout/Alerts/Alert'
-import { toast } from 'react-toastify'
 const Details = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         mode: "onTouched"
     });
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { pass } = useSelector((state) => state.AuthReducer);
+    const {pass} = useSelector((state)=>state.AuthReducer);    
     const [role, setRole] = useState(null);
-    const [flag, setFlag] = useState(true)
-    useEffect(() => {
-        if (role === "customer") {
-            setFlag(false);
-        } else {
-            setFlag(true);
-        }
-    }, [role])
     const onSubmit = (data, e) => {
         e.preventDefault();
         dispatch(actionCreators.userName(data.fullname));
         dispatch(actionCreators.userMobile(data.mobile));
         dispatch(actionCreators.userGender(data.aopt));
         dispatch(actionCreators.userType(data.role));
-        localStorage.setItem("Type", role);
-        if (role !== null) {
+        localStorage.setItem("Type",role);
+        if(role!==null){
             dispatch(actionCreators.userName(data.fullname));
             dispatch(actionCreators.userMobile(data.mobile));
             dispatch(actionCreators.userGender(data.aopt));
             dispatch(actionCreators.userType(data.role));
-            localStorage.setItem("Type", role);
+            localStorage.setItem("Type",role);
             let obj = {
-                "email": localStorage.getItem("email"),
-                "password": pass,
-                "fullname": data.fullname,
-                "mobileno": data.mobile,
-                "gender": data.aopt,
-                "role": role === "store" ? false : true
+                "email":localStorage.getItem("email"),
+                "password":pass,
+                "fullname":data.fullname,
+                "mobileno":data.mobile, 
+                "gender":data.aopt,
+                "role":role==="store" ? false : true
             }
             console.log(obj);
             //after submit if role is store then navigate to another form else it navigate to home page 
             AuthService.Details(obj)
-                .then((res) => {
-                    console.log(res);
-                    toast.success("Details saved sucessfully")
-                    localStorage.setItem("userid", res.data._id);
-                    if (localStorage.getItem("Type") === "store") {
-                        navigate("/create-store");
-                    } else {
-                        navigate("/");
-                    }
-                }).catch((e) => {
-                    console.log(e);
-                    toast.error("Something is Wrong")
-                })
-        } else {
+            .then((res)=>{
+                console.log(res);
+                localStorage.setItem("userid",res.data._id);
+                !obj.role?navigate("/create-store"):navigate("/")
+            }).catch((e)=>{
+                console.log(e);
+            })
+        }else{
             alert("Choose Your Role");
         }
     }
@@ -102,37 +86,9 @@ const Details = () => {
                             <div className='photo1-img'>
                                 <img className="pic1" src={photo1} alt="logo" />
                             </div>
-                            {flag ? <div className='photo1-role' style={{
-                                width: "10vw",
-                                height: "5vh",
-                                background: "#41D3BD",
-                                boxShadow: "0px 2.73786px 15px #C4C4C4",
-                                borderRadius: "68.4466px",
-                                fontFamily: 'Source Sans Pro',
-                                fontWeight: "500",
-                                fontSize: "1.2em",
-                                color: "#FFFFFF",
-                                display: "grid",
-                                placeItems: "center",
-                                cursor: " pointer",
-                            }} onClick={() => setRole("customer")}>
+                            <div className='photo1-role' onClick={() => setRole("customer")}>
                                 Customer
-                            </div> : <div className='photo1-role' style={{
-                                width: "10vw",
-                                height: "5vh",
-                                background: "black",
-                                boxShadow: "0px 2.73786px 15px #C4C4C4",
-                                borderRadius: "68.4466px",
-                                fontFamily: 'Source Sans Pro',
-                                fontWeight: "500",
-                                fontSize: "1.2em",
-                                color: "#FFFFFF",
-                                display: "grid",
-                                placeItems: "center",
-                                cursor: " pointer",
-                            }} onClick={() => setRole("customer")}>
-                                Customer
-                            </div>}
+                            </div>
                         </div>
                         <div className='photo2'>
                             <div className='photo2-img'>
@@ -217,8 +173,7 @@ const Details = () => {
                     <button className='submit-btn' type='submit'>Submit</button>
                 </form>
             </div>
-            <Toaster />
-        </div >
+        </div>
     )
 }
 

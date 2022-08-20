@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { allQueues, getSingle, joinQueue } from '../../../redux/actions/LayoutAction'
 import axios from 'axios'
 import Url from '../../../services/BaseUrl'
+import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions'
 
 const StorePage = () => {
    const [loc,setLoc]= useState({
@@ -30,7 +31,11 @@ const StorePage = () => {
    let dispatch = useDispatch();
    useEffect(()=>{
      let id= location.pathname.split("/")[2]
+     dispatch(setLoader())
       dispatch(getSingle(id))
+      .then(()=>{
+        dispatch(UnsetLoader())
+      })
 
    },[])
 
@@ -142,6 +147,8 @@ const StorePage = () => {
     
     let navigate = useNavigate()
     const join = ()=>{
+      dispatch(setLoader())
+
       if(!inQueue){
         dispatch(joinQueue(location.pathname.split("/")[2]))
         .then(()=>{
@@ -163,6 +170,7 @@ const StorePage = () => {
           })
           .then((res)=>{
               console.log(res);
+              dispatch(setLoader())
               navigate("/")
           })
           .catch((err)=>{
@@ -198,8 +206,12 @@ const StorePage = () => {
               setInQueue(false)
             }
         }
+
+        // dispatch(UnsetLoader())
     }
     useEffect(()=>{
+        // dispatch(setLoader())
+
         findWait()
         let x = Details.avgtime.sort()
         setBT(x[0])

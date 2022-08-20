@@ -7,9 +7,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import * as actionCreators from '../../../redux/actions/AuthAction'
 import { useNavigate } from 'react-router-dom'
 import AuthService from '../../../services/API'
-import Alerts from '../../Layout/Alerts/Alert'
-import Toaster from '../../Layout/Alerts/Alert'
-import { toast } from 'react-toastify'
 const SignUp = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         mode: "onTouched"
@@ -21,18 +18,16 @@ const SignUp = () => {
         dispatch(actionCreators.userEmail(data.email));
         dispatch(actionCreators.userPass(data.password));
         localStorage.setItem("email", data.email);
-        let obj = {
+        let obj={
             "email": data.email,
         }
         AuthService.Signup(obj)
-            .then((res) => {
-                console.log(res);
-                toast.success("Succesfully Added")
-                navigate("/otp");
-            }).catch((error) => {
-                console.log(error);
-                toast.error("Something is wrong")
-            })
+        .then((res)=>{
+            console.log(res);
+        }).catch((error)=>{
+            console.log(error);
+        })
+        navigate("/otp");
     }
     const [toggle, setToggle] = useState(false);
     const [toggle1, setToggle1] = useState(false);
@@ -40,7 +35,6 @@ const SignUp = () => {
         navigate("/login");
     }
     return (<>
-
         <div className='Signup-Page'>
             <div className='Navbar-Signup'>
                 <Navbar />
@@ -85,8 +79,8 @@ const SignUp = () => {
             <div className='queue-img'>
                 <img className="pic" src={image} alt="logo" />
             </div>
-            <Toaster />
-        </div>
-    </>)
+            
+            </div>
+        </>)
 }
 export default SignUp
