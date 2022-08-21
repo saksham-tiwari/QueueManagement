@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import * as actionCreators from '../../../redux/actions/AuthAction'
 import { useNavigate } from 'react-router-dom'
 import AuthService from '../../../services/API'
+import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions'
 const SignUp = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         mode: "onTouched"
@@ -14,6 +15,7 @@ const SignUp = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const onSubmit = (data, e) => {
+        dispatch(setLoader())
         e.preventDefault();
         dispatch(actionCreators.userEmail(data.email));
         dispatch(actionCreators.userPass(data.password));
@@ -23,8 +25,11 @@ const SignUp = () => {
         }
         AuthService.Signup(obj)
         .then((res)=>{
+            dispatch(UnsetLoader())
             console.log(res);
         }).catch((error)=>{
+            dispatch(UnsetLoader())
+
             console.log(error);
         })
         navigate("/otp");

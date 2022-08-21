@@ -5,12 +5,16 @@ import image from '../../Assets/pic.svg'
 import {useNavigate} from 'react-router-dom'
 import './Login.css'
 import AuthService from '../../../services/API'
+import { useDispatch } from 'react-redux'
+import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions'
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         mode: "onTouched"
     });
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const onSubmit = (data, e) => {
+        dispatch(setLoader())
         e.preventDefault();
         let obj = {
             "email":data.email,
@@ -19,16 +23,21 @@ const Login = () => {
         }
         AuthService.Login(obj)
         .then((res)=>{
+            dispatch(UnsetLoader())
+
             console.log(res);
             if(res){
                 localStorage.setItem("access",res.data.access_token);
                 localStorage.setItem("access",res.data.refresh_token);
                 localStorage.setItem("userid",res.data._id);
+
                 // navigate("/");
                 // console.log(obj);
                 !obj.isStore?navigate("/create-store"):navigate("/")
             }
         }).catch((e)=>{
+            dispatch(UnsetLoader())
+
             console.log(e);
         })
     }

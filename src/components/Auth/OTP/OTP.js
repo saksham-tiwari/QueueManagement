@@ -4,8 +4,9 @@ import image from '../../Assets/pic.svg'
 import './OTP.css'
 import OtpInput from 'react-otp-input';
 import AuthService from '../../../services/API'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
+import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions';
 const Otp = () => {
     const [state, setState] = useState('');
     const [flag, setFlag] = useState(false);
@@ -45,7 +46,9 @@ const Otp = () => {
         };
     });
 
+    const dispatch = useDispatch()
     const handleSubmit = (e) =>{
+        dispatch(setLoader())
         e.preventDefault();
         if(localStorage.getItem("forgot")==='1'){
             localStorage.removeItem("forgot");
@@ -55,9 +58,12 @@ const Otp = () => {
             }
             AuthService.otp(obj)
             .then((res)=>{
+                dispatch(UnsetLoader())
             console.log(res);
             navigate("/reset");
             }).catch((e)=>{
+                dispatch(UnsetLoader())
+
             console.log(e);
             })
         }else{
@@ -68,9 +74,12 @@ const Otp = () => {
             }
             AuthService.otp(obj)
             .then((res)=>{
+                dispatch(UnsetLoader())
+
             console.log(res);
             navigate("/detail");
             }).catch((e)=>{
+                dispatch(UnsetLoader())
             console.log(e);
             })
         }

@@ -9,6 +9,7 @@ import {useSelector,useDispatch} from 'react-redux'
 import * as actionCreators from '../../../redux/actions/AuthAction'
 import { useNavigate } from 'react-router-dom'
 import AuthService from '../../../services/API'
+import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions'
 const Details = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         mode: "onTouched"
@@ -18,6 +19,7 @@ const Details = () => {
     const {pass} = useSelector((state)=>state.AuthReducer);    
     const [role, setRole] = useState(null);
     const onSubmit = (data, e) => {
+        dispatch(setLoader())
         e.preventDefault();
         dispatch(actionCreators.userName(data.fullname));
         dispatch(actionCreators.userMobile(data.mobile));
@@ -42,10 +44,12 @@ const Details = () => {
             //after submit if role is store then navigate to another form else it navigate to home page 
             AuthService.Details(obj)
             .then((res)=>{
+                dispatch(UnsetLoader())
                 console.log(res);
                 localStorage.setItem("userid",res.data._id);
                 !obj.role?navigate("/create-store"):navigate("/")
             }).catch((e)=>{
+                dispatch(UnsetLoader())
                 console.log(e);
             })
         }else{
