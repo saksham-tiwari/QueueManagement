@@ -15,7 +15,6 @@ import { useDispatch } from 'react-redux/es/exports';
 import { addStoreDetails, checkStore } from '../../../redux/actions/LayoutAction';
 import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions';
 import { message } from 'antd';
-// import "antd/dist/antd.css";
 
 
 
