@@ -38,15 +38,25 @@ https://saksham-tiwari.github.io/hackjklu/login
 ####  Backend Hosted Link
 http://44.206.0.172:3000
 
-#### Figma Link
-https://www.figma.com/file/zaq8P7pBj12N6LKxpa3sir/QWait
-
 ## About 
 
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062861/Signup_ifdoir.png)
+
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062858/OTP_uowyh4.png)
+
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062857/D_Customer_Home_w5krgw.png)
+
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062854/D_Store_Detail_Page_bsd6bi.png)
+
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062859/D_Store_details_errspy.png)
+
+#### Machine Learning Forecasting 
+by using **Arima Model** for getting better forecasting the average waiting time. 
+It will help in **customer retention, increase sales and better customer experinence.**
+
+![alt text](https://res.cloudinary.com/golchi/image/upload/v1661063502/WhatsApp_Image_2022-08-21_at_12.01.21_PM_ovfg8h.jpg)
+
+
+
 
 
