@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hackjklu/static/css/main.dc469e80.css",
-    "main.js": "/hackjklu/static/js/main.ddb362cb.js",
+    "main.css": "/hackjklu/static/css/main.7e8fe3d4.css",
+    "main.js": "/hackjklu/static/js/main.bdc45880.js",
     "static/media/q3.gif": "/hackjklu/static/media/q3.145ea573c728cbb8e875.gif",
     "static/media/pic.svg": "/hackjklu/static/media/pic.57c2af7615d0b29c70fb93a2f3decc20.svg",
     "static/media/user.svg": "/hackjklu/static/media/user.530e25f2db1e7b84f4e14e6eec8049bc.svg",
@@ -10,11 +10,11 @@
     "static/media/customer.svg": "/hackjklu/static/media/customer.f7e08a02b63db03ed9817f9fcca1609b.svg",
     "static/media/store.svg": "/hackjklu/static/media/store.6fd85057035491425037969daa82a115.svg",
     "index.html": "/hackjklu/index.html",
-    "main.dc469e80.css.map": "/hackjklu/static/css/main.dc469e80.css.map",
-    "main.ddb362cb.js.map": "/hackjklu/static/js/main.ddb362cb.js.map"
+    "main.7e8fe3d4.css.map": "/hackjklu/static/css/main.7e8fe3d4.css.map",
+    "main.bdc45880.js.map": "/hackjklu/static/js/main.bdc45880.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc469e80.css",
-    "static/js/main.ddb362cb.js"
+    "static/css/main.7e8fe3d4.css",
+    "static/js/main.bdc45880.js"
   ]
 }
