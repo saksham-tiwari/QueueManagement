@@ -15,7 +15,7 @@ import { useDispatch } from 'react-redux/es/exports';
 import { addStoreDetails, checkStore } from '../../../redux/actions/LayoutAction';
 import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions';
 import { message } from 'antd';
-import "antd/dist/antd.css";
+// import "antd/dist/antd.css";
 
 
 
@@ -132,6 +132,9 @@ const CreateStore = () => {
                 </button>
                 <button className={homeStyles.enterButton} style={{width:"50%", marginLeft:"15%", marginTop:"10px"}} onClick={()=>navigate("/view-queue/id")}>
                     View queue
+                </button>
+                <button className={homeStyles.enterButton} style={{width:"50%", marginLeft:"15%", marginTop:"10px"}} onClick={()=>navigate("/chart")}>
+                    View Store Analytics
                 </button>
             </div>
             <div className={styles.box}>
