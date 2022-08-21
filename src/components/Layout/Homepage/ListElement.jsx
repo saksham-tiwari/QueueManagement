@@ -78,7 +78,7 @@ const ListElement = (props) => {
         <h1 className={styles.head} style={{textAlign:"left", display:"inline"}}>{store._id!=='0'?store.name:"Name"}</h1>
         <span style={{fontSize:"14px", marginLeft:"4px"}}>
             {/* {store.Address} */}
-            {store._id!=='0'?store.Address:"Address"}
+            {store._id!=='0'?((store.Address.length>20)?store.Address.substring(0,20)+"...":store.Address):"Address"}
         </span>
         {/* <span style={{marginLeft:"180px"}}>
           <TimerIcon fontSize='medium' style={{position:"relative",top:"6px", color:"#192839"}}/> 
