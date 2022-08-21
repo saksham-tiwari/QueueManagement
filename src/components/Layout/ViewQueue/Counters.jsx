@@ -32,7 +32,7 @@ const Counters = (props) => {
             <p className={styles.counterNo}>Counter no. {props.i+1}</p>
 
         </div>
-        <p style={{textAlign:"center"}}>Current customers: {props.storeDetails.queue.length}</p>
+        <p style={{textAlign:"center"}}>Current customers: {props.storeDetails.ShopCounter[props.i]}</p>
         
         <span className={styles.removeBtn} onClick={removeCustomer}>Remove</span>
     </div>
