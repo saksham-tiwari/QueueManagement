@@ -98,7 +98,7 @@ const Login = () => {
                             {
                                 toggle ? <i id='passlock' class="fa fa-eye-slash" aria-hidden="true" onClick={() => { setToggle(!toggle) }}></i> : <i id="passlock" class="fa fa-eye" aria-hidden="true" onClick={() => { setToggle(!toggle) }}></i>
                             }
-                            <input className='input-field' type={toggle ? "text" : "password"} placeholder='Enter New Password' name="password" {...register("password", { required: "password is required", minLength: { value: 8, message: "Password must be more than 8 characters" }, maxLength: { value: 14, message: "Password cannot exceed more than 14 characters" } })}></input>
+                            <input className='input-field' type={toggle ? "text" : "password"} placeholder='Enter Password' name="password" {...register("password", { required: "password is required", minLength: { value: 8, message: "Password must be more than 8 characters" }, maxLength: { value: 14, message: "Password cannot exceed more than 14 characters" } })}></input>
                             <p className='alerts'>{errors.password?.message}</p>
                         </div>
                     </div>
