@@ -12,7 +12,7 @@ const DemoLine = () => {
         chartData();
     }, []);
     const chartData = () => {
-        fetch('https://a052-2401-4900-170b-1253-8d9b-9267-8c19-adbd.in.ngrok.io/shop')
+        fetch('https://e538-2401-4900-170b-1253-30c2-c716-bdd1-55c6.in.ngrok.io/shop')
             .then((response) => response.json())
             .then((json) => {
                 setData(json)
@@ -69,12 +69,17 @@ const DemoLine = () => {
         </div>
         <div className='charts-analytics'>
             <div className='bar'>
+    <br/>
+
                 <BarChart />
                 <div>
                     <h3><span>{day} </span>prediction</h3>
                 </div>
             </div>
             <div className='line'>
+    <br/>
+    <br/>
+
                 <Line {...config} />
                 <div>
                 <h3><span>{year + 1} </span>prediction</h3>
