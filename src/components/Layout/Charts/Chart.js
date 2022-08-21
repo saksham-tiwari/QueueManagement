@@ -12,7 +12,7 @@ const DemoLine = () => {
         chartData();
     }, []);
     const chartData = () => {
-        fetch('https://e538-2401-4900-170b-1253-30c2-c716-bdd1-55c6.in.ngrok.io/shop')
+        fetch('https://d4ad-2405-205-1482-fa00-943c-798-b5a8-1b5a.in.ngrok.io/shop')
             .then((response) => response.json())
             .then((json) => {
                 setData(json)
