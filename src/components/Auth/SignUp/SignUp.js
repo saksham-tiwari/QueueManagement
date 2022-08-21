@@ -29,7 +29,6 @@ const SignUp = () => {
             console.log(res);
         }).catch((error)=>{
             dispatch(UnsetLoader())
-
             console.log(error);
         })
         navigate("/otp");

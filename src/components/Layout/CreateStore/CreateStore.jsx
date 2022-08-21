@@ -14,6 +14,9 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux/es/exports';
 import { addStoreDetails, checkStore } from '../../../redux/actions/LayoutAction';
 import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions';
+import { message } from 'antd';
+import "antd/dist/antd.css";
+
 
 
 const CreateStore = () => {
@@ -59,8 +62,12 @@ const CreateStore = () => {
         dispatch(addStoreDetails(strName,parseInt(ctr),about,a,a,a,parseFloat(loc.lat),parseFloat(loc.long)))
         .then(()=>{
             dispatch(UnsetLoader())
+            message.success("Store Created!")
         })
         .catch(()=>{
+
+            message.success("Store Created!")
+
             dispatch(UnsetLoader())
 
         })
@@ -86,6 +93,7 @@ const CreateStore = () => {
                 lat:res.data.latti,
                 long:res.data.long
             })
+            
         })
         .catch((err)=>{
             console.log(err.status)
