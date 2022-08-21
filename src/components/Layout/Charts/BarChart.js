@@ -10,7 +10,7 @@ const BarChart = () => {
     }, []);
 
     const barData = ()=>{
-        fetch('https://6c7a-2405-205-1482-fa00-85f6-a648-8097-5f93.in.ngrok.io/customer')
+        fetch('https://a052-2401-4900-170b-1253-8d9b-9267-8c19-adbd.in.ngrok.io/customer')
             .then((response) => response.json())
             .then((json) => {
                 setData(json)
