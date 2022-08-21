@@ -3,12 +3,12 @@
 
 # Built With
 This section should list major frameworks/libraries used in this project.
-#React JS
-#Node JS
-#Express JS
-#Mongo DB
-#Machine Learning
-#Figma
+- React JS
+- Node JS
+- Express JS
+- Mongo DB
+- Machine Learning
+- Figma
 
 ### Getting Started
 This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
@@ -38,15 +38,30 @@ https://saksham-tiwari.github.io/hackjklu/login
 ####  Backend Hosted Link
 http://44.206.0.172:3000
 
-#### Figma Link
-https://www.figma.com/file/zaq8P7pBj12N6LKxpa3sir/QWait
-
 ## About 
 
+##### Signup Page
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062861/Signup_ifdoir.png)
+
+##### OTP Page
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062858/OTP_uowyh4.png)
+
+##### Customer Page
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062857/D_Customer_Home_w5krgw.png)
+
+##### Create Store Page
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062854/D_Store_Detail_Page_bsd6bi.png)
+
+##### Store Page
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062859/D_Store_details_errspy.png)
+
+#### Machine Learning Forecasting 
+by using **Arima Model** for getting better forecasting the average waiting time. 
+It will help in **customer retention, increase sales and better customer experinence.**
+
+![alt text](https://res.cloudinary.com/golchi/image/upload/v1661063502/WhatsApp_Image_2022-08-21_at_12.01.21_PM_ovfg8h.jpg)
+
+
+
 
 
