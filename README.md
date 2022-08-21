@@ -3,12 +3,12 @@
 
 # Built With
 This section should list major frameworks/libraries used in this project.
-#React JS
-#Node JS
-#Express JS
-#Mongo DB
-#Machine Learning
-#Figma
+- React JS
+- Node JS
+- Express JS
+- Mongo DB
+- Machine Learning
+- Figma
 
 ### Getting Started
 This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
