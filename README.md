@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Q-Wait?
+#### The best Customer Experience Software (Digitalised Queue Management System) for retailers and banks. Manage appointments,queues and manage tasks.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Built With
+This section should list major frameworks/libraries used in this project.
+#React JS
+#Node JS
+#Express JS
+#Mongo DB
+#Machine Learning
+#Figma
 
-## Available Scripts
+### Getting Started
+This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
-In the project directory, you can run:
+### Prerequisites
+This is an example of how to list things you need to use the software and how to install them.
 
-### `npm start`
+> npm install npm@latest -g
+Installation
+Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Clone the repo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##### Frontend
+git clone https://github.com/saksham-tiwari/hackjklu.git
+##### Backend
+git clone https://github.com/M0hitSingh/Jklu-Q-wait.git
+##### Install NPM packages
 
-### `npm test`
+>npm install
+Enter your API in config.js
+const API_KEY = 'ENTER YOUR API';
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+####  Frontend Hosted Link 
+https://saksham-tiwari.github.io/hackjklu/login
 
-### `npm run build`
+####  Backend Hosted Link
+http://44.206.0.172:3000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Figma Link
+https://www.figma.com/file/zaq8P7pBj12N6LKxpa3sir/QWait
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## About 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062861/Signup_ifdoir.png)
+![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062858/OTP_uowyh4.png)
+![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062857/D_Customer_Home_w5krgw.png)
+![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062854/D_Store_Detail_Page_bsd6bi.png)
+![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062859/D_Store_details_errspy.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
