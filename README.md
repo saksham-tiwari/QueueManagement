@@ -40,14 +40,19 @@ http://44.206.0.172:3000
 
 ## About 
 
+##### Signup Page
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062861/Signup_ifdoir.png)
 
+##### OTP Page
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062858/OTP_uowyh4.png)
 
+##### Customer Page
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062857/D_Customer_Home_w5krgw.png)
 
+##### Create Store Page
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062854/D_Store_Detail_Page_bsd6bi.png)
 
+##### Store Page
 ![alt text](https://res.cloudinary.com/golchi/image/upload/v1661062859/D_Store_details_errspy.png)
 
 #### Machine Learning Forecasting 
