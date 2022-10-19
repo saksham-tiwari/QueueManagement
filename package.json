@@ -1,6 +1,6 @@
 {
-  "homepage": "https://saksham-tiwari.github.io/hackjklu/",
-  "name": "hackjklu",
+  "homepage": "https://saksham-tiwari.github.io/QueueManagement/",
+  "name": "queue-management",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
