@@ -2,7 +2,6 @@
 #### The best Customer Experience Software (Digitalised Queue Management System) for retailers and banks. Manage appointments,queues and manage tasks.
 
 # Built With
-This section should list major frameworks/libraries used in this project.
 - React JS
 - Node JS
 - Express JS
