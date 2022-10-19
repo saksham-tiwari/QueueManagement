@@ -27,7 +27,7 @@ Enter your API in config.js
 const API_KEY = 'ENTER YOUR API';
 
 ####  Frontend Hosted Link 
-https://saksham-tiwari.github.io/hackjklu/login
+https://saksham-tiwari.github.io/QueueManagement/login
 
 ####  Backend Hosted Link
 http://44.206.0.172:3000
