@@ -17,7 +17,7 @@ Below is an example of how you can instruct your audience on installing and sett
 ### Clone the repo
 
 ##### Frontend
-git clone https://github.com/saksham-tiwari/hackjklu.git
+git clone https://github.com/saksham-tiwari/QueueManagement.git
 ##### Backend
 git clone https://github.com/M0hitSingh/Jklu-Q-wait.git
 ##### Install NPM packages
